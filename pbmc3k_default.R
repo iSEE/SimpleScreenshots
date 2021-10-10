@@ -19,6 +19,8 @@ colnames(pbmc3k) <- paste0("Cell", seq_len(ncol(pbmc3k)))
 
 pbmc3k <- addPerCellQCMetrics(pbmc3k)
 
+# initial ----
+
 initial <- list()
 
 ################################################################################
