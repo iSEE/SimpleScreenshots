@@ -120,10 +120,6 @@ initial[["FeatureAssayPlot1"]] <- new("FeatureAssayPlot", Assay = "logcounts", X
 
 # iSEE ----
 
-initial <- list(
-    ReducedDimensionPlot(),
-    ColumnDataPlot(),
-    FeatureAssayPlot()
-    )
+app <- iSEE(pbmc3k, initial = initial)
 
-iSEE(pbmc3k, initial = initial)
+shiny::runApp(app, launch.browser = TRUE)

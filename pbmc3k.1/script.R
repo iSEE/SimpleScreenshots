@@ -222,4 +222,6 @@ initial[["SampleAssayPlot1"]] <- new("SampleAssayPlot", Assay = "logcounts", XAx
 
 # iSEE ----
 
-iSEE(pbmc3k, initial = initial)
+app <- iSEE(pbmc3k, initial = initial)
+
+shiny::runApp(app, launch.browser = TRUE)
